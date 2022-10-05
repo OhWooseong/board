@@ -23,7 +23,7 @@ public class DatabaseConfig {
 
     @Bean
     @ConfigurationProperties(prefix = " spring.datasource.hikari")
-    public HikariConfig hikariConfig(){
+    public HikariConfig hikariConfig(){// 테스ㅡ
         return new HikariConfig();
     }
     @Bean
