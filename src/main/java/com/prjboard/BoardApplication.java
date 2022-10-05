@@ -1,4 +1,4 @@
-package com.prjboard.board;
+package com.prjboard;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
