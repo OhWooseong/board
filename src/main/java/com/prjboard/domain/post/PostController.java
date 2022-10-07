@@ -19,6 +19,7 @@ public class PostController {
     @GetMapping("/post/write.do")
     public String openPostWrite(@RequestParam(value ="id", required = false)final Long id, Model model){
         if ( id != null){
+
             PostResponse post = postService.findPostById(id);
             model.addAttribute("post", post);
         }
@@ -36,5 +37,12 @@ public class PostController {
         List<PostResponse> posts = postService.findAllPost();
         model.addAttribute("posts",posts);
         return "post/list";
+    }
+
+    @GetMapping("/post/view.do")
+    public String openPostView(@RequestParam final Long id, Model model){
+        PostResponse post = postService.findPostById(id);
+        model.addAttribute("post", post);
+        return "post/view";
     }
 }
